@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  month: MyString
+  country: MyString
+  diary: MyText
+
+two:
+  title: MyString
+  month: MyString
+  country: MyString
+  diary: MyText
