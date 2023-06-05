@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 Event.delete_all
+Attendee.delete_all
 
 
 
@@ -19,6 +20,10 @@ Event.delete_all
 
 
 
-30.times do
+15.times do
     Event.create(title: Faker::Name.name, month: Faker::Date.in_date_period(month: 2), country: Faker::Address.country, diary: Faker::Markdown.emphasis)
+end
+
+30.times do
+    Attendee.create(name: Faker::Name.name, company: Faker::Company.name, position: Faker::Company.profession, event_id: Event.all.sample.id)
 end
